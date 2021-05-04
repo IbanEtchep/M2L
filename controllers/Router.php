@@ -1,4 +1,6 @@
 <?php
+require_once ("views/View.php");
+
 class Router {
 
     private $_controller;
@@ -25,7 +27,7 @@ class Router {
                     require_once ($controllerFile);
                     $this->_controller = new $controllerClass($url);
                 }else{
-                    throw new Exception("Page introuvable");
+                    throw new Exception("La page demandée n'a pas pu être trouvée.");
                 }
             }else{
                 require_once ('controllers/ControllerAccueil.php');
@@ -33,8 +35,8 @@ class Router {
             }
         }catch (Exception $e){
             $errorMsg = $e->getMessage();
-            echo $errorMsg;
-            require_once ('views/viewError.php');
+            $this->_view = new View('Error');
+            $this->_view->generate(array('errorMsg' => $errorMsg));
         }
 
     }
