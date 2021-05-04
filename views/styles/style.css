@@ -63,6 +63,25 @@ body {
 .corps h1, .corps h5 {
   text-align: center;
 }
+.corps table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.corps table thead {
+  font-weight: 800;
+  border-bottom: #ffca1a solid 1px;
+}
+.corps table thead tr, .corps table thead th {
+  background-color: #222222;
+  padding: auto;
+}
+.corps table tr:nth-child(even) {
+  background-color: #222222;
+}
+.corps table tr, .corps table th {
+  background-color: #333333;
+  padding: auto;
+}
 
 footer {
   text-align: center;

@@ -4,7 +4,9 @@
 class LigueManager extends Model
 {
 
-    public function getLigues(){
+    public function getLigues(): array
+    {
+        return $this->getAll('LIGUE', 'Ligue');
 
     }
 
@@ -13,7 +15,7 @@ class LigueManager extends Model
     }
 
     public function addLigue(){
-
+//INSERT INTO LIGUE (nomLigue, siteLigue, descriptifLigue) VALUES ("test", "https://test.fr/", "descriptif test de ligue");
     }
 
 

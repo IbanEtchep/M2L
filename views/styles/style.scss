@@ -66,7 +66,29 @@ body {
   h1, h5 {
     text-align: center;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      font-weight: 800;
+      border-bottom: #ffca1a solid 1px;
+      tr, th {
+        background-color: #222222;
+        padding: auto;
+      }
+    }
+    tr:nth-child(even) {
+      background-color: #222222;
+    }
+
+    tr, th {
+      background-color: #333333;
+      padding: auto;
+    }
+  }
 }
+
 
 footer {
   text-align: center;
