@@ -19,6 +19,7 @@ class Router {
             //LE CONTROLLEUR EST INCLU SELON L'ACTION DE L'UTILISATEUR
             if(isset($_GET['url'])){
                 $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
+                //echo print_r($url);
                 $controller = ucfirst(strtolower($url[0]));
                 $controllerClass = "Controller".$controller;
                 $controllerFile = "controllers/".$controllerClass.".php";

@@ -15,6 +15,7 @@ class View
     //GENERE ET AFFICHE LA VUE
     public function generate($data)
     {
+        //echo print_r($data);
         //Partie spécifique de la vue
         $content = $this->generateFile($this->_file, $data);
 
@@ -34,8 +35,9 @@ class View
             require $file;
 
             return ob_get_clean();
-        }else
+        }else{
             throw  new Exception('Fichier '.$file. " introuvable.");
+        }
     }
 
 

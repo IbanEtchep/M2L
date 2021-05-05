@@ -1,7 +1,7 @@
 <?php
 require_once ('views/View.php');
 
-class ControllerListligues
+class ControllerLigues
 {
 
     private $_liguesManager;
@@ -19,7 +19,7 @@ class ControllerListligues
     private function intervenants(){
         $this->_liguesManager = new LigueManager();
         $ligues = $this->_liguesManager->getLigues();
-        $this->_view = new View('ListLigues');
+        $this->_view = new View('Ligues');
         $this->_view->generate(Array('ligues' => $ligues));
     }
 

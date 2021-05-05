@@ -10,8 +10,13 @@
         <nav id="navbar">
             <div class="nav-cellule header-logo"> <a href="<?=URL?>"><img src="views/images/logo_lorraine.svg" alt="logo"/></a> </div>
             <div class="nav-cellule"><a href="<?=URL?>">Accueil</a></div>
-            <div class="nav-cellule"><a href="<?=URL?>ListLigues">Ligues</a></div>
-            <div class="nav-cellule"><a href="espaceclient.php">Espace Client</a></div>
+            <div class="nav-cellule"><a href="<?=URL?>ligues">Ligues</a></div>
+            <?php  if(isLoggedOn()) :?>
+                <div class="nav-cellule"><a href="<?=URL?>administration">Administration</a></div>
+                <div class="nav-cellule"><a href="<?=URL?>authentification/deconnexion">Déconnexion</a></div>
+            <?php else: ?>
+                <div class="nav-cellule"><a href="<?=URL?>authentification">Authentification</a></div>
+            <?php endif; ?>
         </nav>
     </header>
 
@@ -25,3 +30,11 @@
 
     </footer>
 </html>
+
+<?php
+function isLoggedOn() {
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    return isset($_SESSION["intervenant"]);
+}

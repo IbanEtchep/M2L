@@ -57,8 +57,7 @@ body {
   border-bottom: 1px solid #ffca1a;
   border-radius: 3px;
   font-weight: 500;
-  font-size: 20px;
-  font-size: 2vmax;
+  font-size: 1vmax;
   color: white;
   margin: 5%;
   background-color: #222;
@@ -87,6 +86,17 @@ body {
       padding: auto;
     }
   }
+}
+
+.error{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
 }
 
 
