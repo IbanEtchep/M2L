@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset="uft-8"/>
-        <link rel="stylesheet" href="views/styles/style.css" />
+        <link rel="stylesheet" type="text/css" href="<?=URL?>views/styles/style.css" />
         <title><?= $t ?></title>
     </head>
     <header>
 
         <nav id="navbar">
-            <div class="nav-cellule header-logo"> <a href="<?=URL?>"><img src="views/images/logo_lorraine.svg" alt="logo"/></a> </div>
+            <div class="nav-cellule header-logo"> <a href="<?=URL?>"><img src="<?=URL?>views/images/logo_lorraine.svg" alt="logo"/></a> </div>
             <div class="nav-cellule"><a href="<?=URL?>">Accueil</a></div>
             <div class="nav-cellule"><a href="<?=URL?>ligues">Ligues</a></div>
             <?php  if(isLoggedOn()) :?>

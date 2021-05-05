@@ -5,6 +5,7 @@
   align-items: center;
   padding: 10px;
   border-bottom: #ffca1a solid 5px;
+  flex-flow: wrap-reverse;
 }
 #navbar img {
   width: 75px;
@@ -32,6 +33,31 @@
   transform: scale(1.1);
 }
 
+form {
+  padding: 50px;
+  background-color: #333333;
+  align-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+form a {
+  margin-left: 5px;
+  font-weight: bolder;
+}
+form input {
+  border: none;
+  margin: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #222222;
+  color: white;
+}
+form .yellow-btn {
+  font-weight: bolder;
+  background-color: #ffca1a;
+}
+
 body {
   position: relative;
   min-height: 100%;
@@ -40,10 +66,6 @@ body {
   overflow-x: hidden;
   background-color: #333333;
   border-radius: 0 0 10% 10%;
-  background-image: url("../images/background.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .corps {

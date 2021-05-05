@@ -14,7 +14,7 @@ class ControllerAuthentification
 
         if(isset($url) && count( $url ) == 2){
 
-            echo "$url[1]";
+            //echo "$url[1]";
 
             switch ($url[1]){
                 case "connexion":
@@ -39,7 +39,6 @@ class ControllerAuthentification
                     }
                     break;
                 case "deconnexion":
-                    echo "deco";
                     $this->logout();
                     header('Location: '.URL);
                     exit();

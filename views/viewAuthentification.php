@@ -1,21 +1,21 @@
-<?php $this->_t = 'Accueil M2L'; ?>
+<?php $this->_t = 'Authentification M2L'; ?>
 
-    <h1>Connexion</h1>
+    <form action="<?=URL?>/authentification/connexion" method="POST">
+        <h1>Connexion</h1>
 
-    <?php
-    if(isset($errorMsg)):?>
+        <?php
+        if(isset($errorMsg)):?>
 
-    <div class="error"><?=$errorMsg?></div>
+            <div class="error"><?=$errorMsg?></div>
 
-    <?php endif;?>
+        <?php endif;?>
 
-
-    <form action="./authentification/connexion" method="POST">
+        <a>Email :</a>
         <input type="text" name="mail" placeholder="Email de connexion" /><br />
+        <a>Mot de passe :</a>
         <input type="password" name="mdp" placeholder="Mot de passe"  /><br />
-        <input type="submit" value="Connexion" />
+        <input class="yellow-btn" type="submit" value="Connexion" />
     </form>
-
 
 <br>
 Utilisateur de test : <br/>

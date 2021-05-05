@@ -1,4 +1,4 @@
-<?php $this->_t = 'Accueil M2L'; ?>
+<?php $this->_t = 'Ligues M2L'; ?>
 
     <h1>Liste des ligues</h1>
 
@@ -14,13 +14,17 @@
         </thead>
 
         <tbody>
-        <?php foreach ($ligues as $ligue) : ?>
-            <tr>
-                <td><?=$ligue->getNomLigue()?></td>
-                <td><?=$ligue->getDescriptifLigue()?></td>
-                <td><a href="<?=$ligue->getSiteLigue()?>"><?=$ligue->getSiteLigue()?></a> </td>
-            </tr>
-        <?php endforeach ?>
+        <?php if(isset($ligues)): ?>
+            <?php foreach ($ligues as $ligue) : ?>
+                <tr>
+                    <td><?=$ligue->getNomLigue()?></td>
+                    <td><?=$ligue->getDescriptifLigue()?></td>
+                    <td><a href="<?=$ligue->getSiteLigue()?>"><?=$ligue->getSiteLigue()?></a> </td>
+                </tr>
+            <?php endforeach ?>
+        <?php else: ?>
+            <div class="error">Aucune ligue n'a été trouvée.</div>
+        <?php endif;?>
         </tbody>
 
     </table>
