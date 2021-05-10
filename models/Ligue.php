@@ -87,6 +87,10 @@ class Ligue
         $this->siteLigue = $siteLigue;
     }
 
+    public function getClubs(){
+        $clubManager = new ClubManager();
+        return $clubManager->getLigueClubs($this->getIdL());
+    }
 
 
 }

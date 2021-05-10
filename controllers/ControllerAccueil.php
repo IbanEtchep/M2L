@@ -12,11 +12,11 @@ class ControllerAccueil{
             throw new Exception("Page introuvable");
         }else
         {
-            $this->intervenants();
+            $this->renderAccueil();
         }
     }
 
-    private function intervenants()
+    private function renderAccueil()
     {
         $this->_view = new View('Accueil');
         $this->_view->generate(Array());

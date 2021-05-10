@@ -22,7 +22,6 @@ class ControllerAuthentification
                         header('Location: '.URL);
                         exit();
                     }
-
                     if(isset($_POST['mail'])){
                         $mail = $_POST['mail'];
                         $mdp = $_POST['mdp'];
@@ -78,8 +77,6 @@ class ControllerAuthentification
         if (trim($mdpBD) == trim(crypt($mdp, $mdpBD))) {
             $_SESSION["intervenant"] = $intervenant;
         }
-
-
     }
 
     function logout()

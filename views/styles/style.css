@@ -44,18 +44,23 @@ form a {
   margin-left: 5px;
   font-weight: bolder;
 }
-form input {
+form input, form textarea {
   border: none;
   margin: 3px;
   padding: 10px;
   box-sizing: border-box;
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   background-color: #222222;
   color: white;
 }
 form .yellow-btn {
   font-weight: bolder;
   background-color: #ffca1a;
+}
+form .yellow-btn:hover {
+  cursor: pointer;
 }
 
 body {
@@ -104,10 +109,7 @@ body {
   padding: auto;
 }
 
-.error {
-  color: #D8000C;
-  background-color: #FFBABA;
-  background-image: url("https://i.imgur.com/GnyDvKN.png");
+.success, .error {
   border: 1px solid;
   margin: 10px 0px;
   padding: 15px 10px 15px 50px;
@@ -115,8 +117,54 @@ body {
   background-position: 10px center;
 }
 
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url("https://i.imgur.com/GnyDvKN.png");
+}
+
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image: url("https://i.imgur.com/Q9BGTuy.png");
+}
+
 footer {
   text-align: center;
+}
+
+.admnav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap-reverse;
+}
+.admnav .admnav-cell {
+  border: #ffca1a 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+.admnav .selected {
+  background-color: #333333;
+}
+.admnav a {
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.flex-item {
+  margin: 10px;
+  flex: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
